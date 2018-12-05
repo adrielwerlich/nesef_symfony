@@ -1,0 +1,395 @@
+/*
+.tab-content>.tab-pane {
+    display: none;
+}
+
+.tab-content>.active {
+    display: block;
+}
+
+*/
+
+.sidenav {
+    width: 220px;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background:  blue;/* #2E2D88; */
+    overflow-x: hidden;
+    padding: 8px 0;
+	border-radius: 6px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white; /*#2196F3;*/
+    display: block;
+}
+.sidenav a:hover {
+    /*color: white;*/
+	background-color:  rgb(128, 140, 252)!important; /* #578bab */
+}
+
+.sidenav li {list-style-type: none;}
+
+.jumbotron {
+	background-color: rgb(0, 23, 128);
+	color: white;
+	padding: 30px 15px;
+	border-radius: 6px;
+	font-size: 14px;
+    /* height: 213px; */
+    margin-top: 20px; 
+}
+
+.logo_gecal{
+    padding:0px;
+}
+
+.logo_gecal.col-sm-8{
+    /**/
+}
+
+.imglogo{
+    margin-left: 8px;
+    margin-top: 33px;
+    float: right;
+    /*padding: 5px;*/
+    /*width:100%;*/
+    /*width: ;*/
+}
+
+.ns-first-row{
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.container-menuLateral{
+    padding-right: 5px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: 25px;
+}
+
+.container-menuLateral li {
+    border-bottom: 1px solid #F4F4F4;
+	padding: 7px 15px!important;
+	font-size: 12px!important;
+    text-align: left;
+}
+
+.projetos_dropdown{
+	position:relative;
+	cursor: pointer;
+}
+
+.dropdown-content_projetos{
+	/* color: rgb(255,255,255); */
+	width: 220px;
+	position: absolute;
+	float: left;
+	background-color: rgb(24, 9, 238);
+	display:none;
+}
+
+.dropdown-content_projetos a { 
+    color: #fff !important;   
+}
+
+/* .dropdown-content_projetos a { 
+	/*color: ;*/
+	/* width: 220px;
+	position: absolute;
+	float: left;
+	background-color: rgb(24, 9, 238);
+	display:none; */
+/* } */
+
+
+.projetos_dropdown:hover .dropdown-content_projetos{
+	display:block;
+}
+
+.my_anchor{
+	color: #1D5377 !important;
+	display:block;
+}
+
+
+/* ESTILOS DOS RADIO BUTTONS DO FORMULÁRIO */
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* Create a custom radio button */
+.radio_bt_django {
+  /*position: relative;*/
+  /*top: 10px;*/
+  /*left: 10px;*/
+    bottom: 10px;
+    size:20px;
+  margin: 10px;
+  padding: 5px;
+  /*height: 75px;*/
+  /*width: 65px;*/
+  /*background-color: #eee;*/
+  /*border-radius: 50%;*/
+  list-style-type: none;
+  /*display: inline;*/
+}
+.radio_bt_django li {
+    height: 45px;
+    width: 65px;
+}
+
+.radio_bt_django input {
+    height: 20px;
+    width: 20px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+/*----------------------------------------------------*/
+
+/* ESTILOS DAS CAIXAS DE CHECAGEM DO FORMULÁRIO */
+/* Customize the label (the container) */
+.checkbox_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkbox_checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* Create a custom checkbox */
+.checkbox_checkmark_django {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  /*background-color: #eee;*/
+  margin: 0 5px !important;
+  padding: 5px;
+  background-color: #ccc;
+  cursor:pointer;
+}
+
+.checkbox_checkmark_django:hover {
+   background-color: peachpuff;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkbox_checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkbox_checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox_checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkbox_checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkbox_checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.input_inline_block{
+    margin-left: 12px;
+    padding: 7px;
+    font-size: 22px;
+    width: 70%;
+    border: none;
+}
+
+.input_inline_block:enabled{
+    border:1px solid gray;
+}
+
+.lb_inline_block, .input_inline_block{
+    display: inline-block;
+}
+
+.bt_chama_form{
+    margin-top: 22px;
+    cursor:pointer;
+}
+
+#relato{
+    margin-top: 15px;
+}
+
+
+.input[type="checkbox"] {
+    float: left;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+/* desabilitar data hora */
+#id_data_relato{
+    pointer-events:none;
+    disabled:'disabled';
+}
+
+/* cria uma pequena margem para as abas dos projetos */
+#abas_projetos{
+    margin-top: 10px;
+}
+
+#abas_projetos_extensao{
+    margin-top: 10px;
+}
+/* estilos para os image cards */
+img.element.style {
+}
+
+img{
+    vertical-align: middle;
+    border-style: none;
+}
+
+.pb-5, .py-5 {
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem!important;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem!important;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+}
+
+#nesef_logo{
+    padding: 10px;
+    margin: 10px;
+
+}

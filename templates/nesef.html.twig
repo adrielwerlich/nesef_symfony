@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nesef - Estudo e Pesquisa sobre o ensino de filosofia {% endblock %}
+
+{% block content %}
+
+<div id="nesef">
+    <div class="row ns-first-row">
+        <div class="container-menuLateral col-xs-12 col-sm-4 col-md-3">
+            <div class="sidenav">
+                <a role="button" id="btn-show-nesef">
+                    Sobre o Nesef</a>
+
+                <a role="button" id="bt-show-events"> Eventos </a>
+                <a role="button" id="btn-lines" > Sobre o grupo </a>
+                {#<a role="button" > Galerias </a>#}
+                <!--<a href=""  id="anchorAdminId"> Relatar Violência </a>-->
+                {#<a href=""> Acessar Interface Admins </a></a>#}
+
+                <!--<a role="button" onclick="mostra_formulario()">Observatório de violência</a>-->
+                {#<a role="button" > Eventos </a>#}
+            </div>
+
+        </div>
+
+        <!-- MOSTRA O JUMBOTRON -->
+        <div class="jumbotron col-sm-4" id="jumbo" style="display:block;">
+            <p>
+                {#Líder: Profa. Dra. Vanice dos Santos - Núcleo de Estudos e Pesquisas#}
+                {#Sobre o Ensino de Filosofia - Regional Planalto Catarinense#}
+
+
+                {#{{ dump(apresentacao) }}#}
+                {{ apresentacao.title() }}
+            </p>
+            <strong>
+                {{ apresentacao.citacao() }}
+
+                {#"Caminho e balança,#}
+                {#Ponte e palavra#}
+                {#encontram-se em uma passagem.#}
+
+
+                {#Vai e toma sobre ti#}
+                {#Erro e pergunta#}
+                {#ao longo de tua única senda."#}
+                {#Martin Heidegger. Da experiência do pensar.#}
+            </strong>
+            <br/>
+            <!--strong>Conhece a ti mesmo - do grego γνωθι σεαυτόν</strong-->
+
+        </div>
+
+        <div class="logo_gecal col-sm-4" style="display:block;">
+            <img src="imagens/nesef_lg.png" class="imglogo" />
+        </div>
+
+        <article class="col-xs-8 col-sm-5 col-md-8" id="about-nesef" style="display: none;">
+            <h2> Núcleo de Estudos e Pesquisas sobre Ensino de Filosofia e Educação Filosófica - NESEF – Regional Planalto Catarinense</h2>
+            <p style="font-size: 15px"> O Núcleo de Estudos e Pesquisas sobre o Ensino de Filosofia (NESEF) foi criado em 1999 por iniciativa de professores e estudantes de Licenciatura em Filosofia da UFPR e professores de Filosofia da rede pública paranaense. Foi institucionalizado pela Portaria N° 031/02 - ED, em 05/12/02, expedida pelo Conselho Setorial de Educação da UFPR. Em outubro de 2009 o grupo foi certificado pela UFPR e registrado/credenciado no CNPq. Os estudos e pesquisas versam sobre a educação filosófica e também sobre o ensino de filosofia. Parte dos resultados das pesquisas foram publicizados em forma de artigos e estão disponíveis em: www.nesef.ufpr.br. Além disso, os livros "Textos filosóficos em discussão", "Discutindo textos filosóficos" e "Textos clássicos de Filosofia" foram publicados com trabalhos produzidos a partir das discussões do Grupo. O grupo de pesquisa NESEF – Regional Planalto Catarinense foi criado na Uniplac e certificado junto ao CNPq no ano 2011. O grupo, estando na área de confluência da filosofia e educação, dedica-se a estudar fundamentos da educação. Em andamento a pesquisa "Conflitos sociais e forças morais: educação para a convivência solidária" </p>
+        </article>
+
+        <div id="research-lines" style="display:none;">
+            <h2>Linhas de pesquisa:</h2>
+            <ul style="font-size: 15px">
+                <li> Diálogos interculturais: entre conhecimentos científicos e tradicionais </li>
+                <li> Epistemologias do Sul </li>
+                <li> Processos formativos na América Latina </li>
+            </ul>
+        </div>
+
+
+        <div id="nesef-events" style="display: none;" class="col-sm-7">
+            {#{{ dump(anos) }}#}
+            <h1>EVENTOS QUE O NESEF ESTEVE PRESENTE</h1>
+            {% for ano in anos %}
+                <h3>Eventos do ano {{ ano }}</h3>
+
+                {% for evento in ano.participacaoEventos %}
+
+                    <p> {{ evento }} </p>
+
+                {% endfor %}
+
+            {% endfor %}
+        </div>
+
+
+
+
+    </div>
+    <div class="row">
+        <img id="nesef_logo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+             src="imagens/logo_nesef.jpg" />
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('/js/NesefController.js')}}"></script>
+{% endblock %}
