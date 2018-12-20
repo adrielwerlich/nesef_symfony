@@ -8,11 +8,11 @@ parameters:
 doctrine:
     dbal:
         # configure these for your database server
-        # dbname:               nesef
-        # host:                 172.16.255.446
-        # port:                 3306
-        # user:                 ccmy.nesef
-        # password:             nesef*adm!
+        dbname:               nesef
+        host:                 172.16.255.446
+        port:                 3306
+        user:                 ccmy.nesef
+        password:             nesef*adm!
         url: '%env(DATABASE_URL)%'
         driver: 'pdo_mysql'
         server_version: '5.7'

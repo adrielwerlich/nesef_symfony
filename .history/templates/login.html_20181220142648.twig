@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+  <div class="col-sm-12">
+
+      <form action="{{ path ('login') }} " class="form-signin col-sm-6 mt-5 mb-25 p-5" method="POST" 
+      style="margin-left: 13%;margin-bottom: 4%;" >
+      
+        <h2 class="form-signin-heading">Login para painel administrativo Nesef</h2>
+    
+        <label for="_username" class="sr-only">Usuário</label>
+        <input type="text" class="form-control" id="_username" name="_username" placeholder="Nome de usuário" required autofocus>
+    
+        <label for="_password" class="sr-only">Password</label>
+        <input type="password" id="_password" name="_password" class="form-control" placeholder="Password" required>
+    
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      
+      </form>
+
+  </div>
+
+  {% endblock %}

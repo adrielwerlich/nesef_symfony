@@ -1,0 +1,3 @@
+ commando para executar servidor
+ 
+ php bin/console server:start

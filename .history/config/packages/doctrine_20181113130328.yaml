@@ -8,12 +8,6 @@ parameters:
 doctrine:
     dbal:
         # configure these for your database server
-        # dbname:               nesef
-        # host:                 172.16.255.446
-        # port:                 3306
-        # user:                 ccmy.nesef
-        # password:             nesef*adm!
-        url: '%env(DATABASE_URL)%'
         driver: 'pdo_mysql'
         server_version: '5.7'
         charset: utf8mb4
@@ -21,7 +15,7 @@ doctrine:
             charset: utf8mb4
             collate: utf8mb4_unicode_ci
 
-        # url: '%env(resolve:DATABASE_URL)%'
+        url: '%env(resolve:DATABASE_URL)%'
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
